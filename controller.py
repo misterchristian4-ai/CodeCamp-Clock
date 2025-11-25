@@ -222,7 +222,7 @@ class ClockController:
         if self.model.get_just_triggered_status() or self.model.get_timer_just_finished_status():
             try:
                 # Simple 1-second beep at 1000 Hz
-                winsound.Beep(1000, 1000) 
+                winsound.Beep(500, 4000) 
 
             except Exception as e:
                 print(f"Winsound error: {e}")
