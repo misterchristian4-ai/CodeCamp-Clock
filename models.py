@@ -3,14 +3,43 @@ import datetime
 import pytz
 
 class ClockModel:
+    # COMMON_TIMEZONES = {
+    #     "Local Time": None, 
+    #     "UTC": "UTC",
+    #     "EST (New York)": "America/New_York",
+    #     "PST (Los Angeles) - 3 ": "America/Los_Angeles",
+    #     "CET (Paris)": "Europe/Paris",
+    #     "JST (Tokyo)": "Asia/Tokyo"
+    # }
+
     COMMON_TIMEZONES = {
-        "Local Time": None, 
-        "UTC": "UTC",
-        "EST (New York)": "America/New_York",
-        "PST (Los Angeles) - 3 ": "America/Los_Angeles",
-        "CET (Paris)": "Europe/Paris",
-        "JST (Tokyo)": "Asia/Tokyo"
-    }
+    # --- Local & Standard ---
+    "Local Time": None, 
+    "UTC (Coordinated Universal Time)": "UTC",
+    
+    # --- Americas ---
+    "EST (New York)": "America/New_York",
+    "PST (Los Angeles)": "America/Los_Angeles",
+    "CST (Chicago)": "America/Chicago",
+    "AST (Halifax)": "America/Halifax",
+    "Sao Paulo (Brazil)": "America/Sao_Paulo",
+    
+    # --- Europe & Africa ---
+    "CET (Paris / Central Europe)": "Europe/Paris",
+    "GMT (London / Dublin)": "Europe/London",
+    "EET (Athens / East Europe)": "Europe/Athens",
+    "SAST (Johannesburg)": "Africa/Johannesburg",
+    
+    # --- Asia & Middle East ---
+    "JST (Tokyo)": "Asia/Tokyo",
+    "CST (Shanghai / Beijing)": "Asia/Shanghai",
+    "IST (New Delhi)": "Asia/Kolkata",
+    "Dubai (UAE)": "Asia/Dubai",
+    
+    # --- Australia & Pacific ---
+    "AEST (Sydney)": "Australia/Sydney",
+    "NZST (Auckland)": "Pacific/Auckland"
+}
     
     def __init__(self):
         self._is_24_hour_format = True
